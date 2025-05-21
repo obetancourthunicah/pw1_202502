@@ -28,7 +28,7 @@
             y relación de la data a presentar.
         </p>
         <h2>Ejemplo de una Tabla Básica</h2>
-        <table border="1">
+        <table border="1" >
             <!-- table row -->
              <tr>
                 <!-- table headers-->
@@ -42,7 +42,7 @@
              </tr>
              <tr>
                 <!-- table datacell -->
-                 <th rowspan="2">Centro</th>
+                 <th rowspan="3">Centro</th>
                  <td>1</td>
                  <td>Tegucigalpa</td>
                  <td>110</td>
@@ -60,7 +60,11 @@
                  <td>78</td>
              </tr>
              <tr>
-                <th rowspan="2">Norte</th>
+                <td colspan="2">Total Centro</td>
+                <td colspan="4">669</td>
+             </tr>
+             <tr>
+                <th rowspan="3">Norte</th>
                 <td>3</td>
                 <td>San Pedro Sula</td>
                 <td>125</td>
@@ -76,7 +80,86 @@
                 <td>73</td>
                 <td>78</td>
              </tr>
+              <tr>
+                <td colspan="2">Total Norte</td>
+                <td colspan="4">590</td>
+             </tr>
+             <tr>
+                <td colspan="7">
+                    Fuente Extraido de ABC y ZXY el 2025
+                </td>
+             </tr>
         </table>
 
+        <h2>Elaboración de Tablas Semánticas</h2>
+         <table border="1" >
+            <thead>
+                <tr>
+                    <th colspan="7">Ventas en Miles por Ciudad de ABC Corp</th>
+                </tr>
+                <tr>
+                    <th>Zona</th>
+                    <th>#</th>
+                    <th>Ciudad</th>
+                    <th>Q1</th>
+                    <th>Q2</th>
+                    <th>Q3</th>
+                    <th>Q4</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                    <!-- table datacell -->
+                    <th rowspan="3">Centro</th>
+                    <td>1</td>
+                    <td>Tegucigalpa</td>
+                    <td>110</td>
+                    <td>90</td>
+                    <td>98</td>
+                    <td>125</td>
+                </tr>
+                <tr>
+                    <!-- table datacell -->
+                    <td>2</td>
+                    <td>Valle de Angeles</td>
+                    <td>80</td>
+                    <td>85</td>
+                    <td>83</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Total Centro</td>
+                    <td colspan="4">669</td>
+                </tr>
+                <tr>
+                    <th rowspan="3">Norte</th>
+                    <td>3</td>
+                    <td>San Pedro Sula</td>
+                    <td>125</td>
+                    <td>90</td>
+                    <td>98</td>
+                    <td>110</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Choloma</td>
+                    <td>75</td>
+                    <td>77</td>
+                    <td>73</td>
+                    <td>78</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Total Norte</td>
+                    <td colspan="4">590</td>
+                </tr>
+             </tbody>
+             <tfoot>
+                <tr>
+                    <td colspan="7">
+                        Fuente Extraido de ABC y ZXY el 2025
+                    </td>
+                </tr>
+             </tfoot>
+        </table>
     </body>
 </html>
