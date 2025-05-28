@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Multimedia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Multimedia</h1>
+        <h2>Imágenes</h2>
+        <img src="https://picsum.photos/id/145/480/480" alt="Foto de perfil" />
+        <br/>
+        <img src="imgs/selfie_web_avatar.jpg" alt="Foto Perfil 2" />
+        <br/>
+        <picture>
+            <source srcset="https://picsum.photos/id/153/1300/720" media="(min-width:1025px)" />
+            <source srcset="https://picsum.photos/id/146/1024/640" media="(min-width:768px)" />
+            <img src="https://picsum.photos/id/145/480/480" alt="Foto de perfil" />
+        </picture>
+        <h2>Video</h2>
+        <video autoplay controls>
+            <source src="multi/mov_bbb.mp4" type="video/mp4" />
+            <source src="multi/mov_bbb.ogg" type="video/ogg" />
+        </video>
+        <h2>Audio</h2>
+       <audio autoplay controls>
+            <source src="multi/horse.mp3" type="audio/mp3" />
+            <source src="multi/horse.ogg" type="audio/ogg" />
+       </audio>
+    </body>
+</html>
