@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Formulario en HTML</title>
+    </head>
+    <body>
+        <h1>Formulario en HTML</h1>
+        <p>
+            Para capturar datos provienientes del usuario HTML
+            establece etiquetas que sirven para definir controles de captura de datos
+            y le metodo que se utilizará para serializar la informacion y
+            enviarla a la acción definida.
+        </p>
+
+        <form action="formulario.html" method="GET">
+            <label for="txtNombre">Nombre Completo:</label>
+            <input type="text" name="nombre" id="txtNombre" placeholder="John Doe" />
+            <br/>
+            <label for="txtEmail">Correo Electrónico:</label>
+            <input type="email" name="email" id="txtEmail" placeholder="johndoe@amail.com" />
+            <br/>
+            <label for="txtPhone">Teléfono Celular:</label>
+            <input type="text" name="phone" id="txtPhone" placeholder="+(504) 9999-9999" />
+            <br/>
+            <label for="txtEdad">Edad:</label>
+            <input type="number" name="edad" id="txtEdad" placeholder="0-100" min="0" max="100" step="1" />
+            <br/>
+            <label for="txtFecha">Fecha de Salida:</label>
+            <input type="date" name="fecha" id="txtFecha" />
+            <br/>
+            <label for="txtSalario">Salario:</label>
+            <input type="range" name="salario" id="txtSalario" />
+            <br/>
+            <label>Color Preferido</label>
+            <br/>
+            <input type="radio" name="color" id="colorRojo" value="red"/>
+            <label for="colorRojo">&nbsp;Rojo</label>
+            &nbsp;
+            <input type="radio" name="color" id="colorAzul" value="blue" checked/>
+            <label for="colorAzul">&nbsp;Azul</label>
+            &nbsp;
+            <input type="radio" name="color" id="colorVerde" value="green"/>
+            <label for="colorVerde">&nbsp;Verde</label>
+            &nbsp;
+            <input type="radio" name="color" id="colorAmarillo" value="yellow"/>
+            <label for="colorAmarillo">&nbsp;Amarillo</label>
+            <br/>
+            <label for="cmbPais">País de Origen:</label>
+            <select name="pais" id="cmbPais">
+                <option value="HND">Honduras</option>
+                <option value="GTM">Guatemala</option>
+                <option value="ESL">El Salvador</option>
+                <option value="NIC">Nicaragua</option>
+                <option value="PMA">Panamá</option>
+                <option value="MEX">México</option>
+                <option value="USA">Estado Unidos</option>
+                <option value="ARG">Argentina</option>
+            </select>
+
+            <!-- <input type="submit" name="btnEnviar" value="Enviar" /> -->
+            <button type="submit" name="btnSubmit">Enviar</button>
+        </form>
+    </body>
+</html>
