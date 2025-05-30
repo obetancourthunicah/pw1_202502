@@ -15,7 +15,14 @@
 
         <form action="formulario.html" method="GET">
             <label for="txtNombre">Nombre Completo:</label>
-            <input type="text" name="nombre" id="txtNombre" placeholder="John Doe" />
+            <input type="text" name="nombre" id="txtNombre" placeholder="John Doe"
+                required
+            />
+            <br/>
+            <label for="txtPassword">Contraseña:</label>
+            <input type="password" name="password" id="txtPassword" placeholder="1# 1M 1m ..."
+                maxlength="32" minlength="8" required
+            />
             <br/>
             <label for="txtEmail">Correo Electrónico:</label>
             <input type="email" name="email" id="txtEmail" placeholder="johndoe@amail.com" />
@@ -58,6 +65,29 @@
                 <option value="ARG">Argentina</option>
             </select>
 
+            <br/>
+            <fieldset>
+                <legend>Opciones de Configuración</legend>
+                <input type="checkbox" value="1" name="allowFileAccess" id="chkAllFileAccess" />
+                <label for="chkAllFileAccess">Permitir Acceso a Archivos</label>
+                <br/>
+                <input type="checkbox" value="1" name="allowVideoDevice" id="chkAllVideoDevice" />
+                <label for="chkAllVideoDevice">Permitir Acceso a Cámara</label>
+                <br/>
+                <input type="checkbox" value="1" name="allowAudioDevice" id="chkAllAudioDevice" />
+                <label for="chkAllAudioDevice">Permitir Acceso a Micrófono</label>
+                <br/>
+            </fieldset>
+            <label for="txtBio">Bio:</label><br/>
+            <textarea
+                name="biotext"
+                id="txtBio"
+                placeholder="Auto biografía corta"
+                rows="10"
+                maxlength="1024"
+                cols="80"
+            ></textarea>
+            <br/>
             <!-- <input type="submit" name="btnEnviar" value="Enviar" /> -->
             <button type="submit" name="btnSubmit">Enviar</button>
         </form>
