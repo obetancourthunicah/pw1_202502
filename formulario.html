@@ -88,8 +88,23 @@
                 cols="80"
             ></textarea>
             <br/>
+
             <!-- <input type="submit" name="btnEnviar" value="Enviar" /> -->
             <button type="submit" name="btnSubmit">Enviar</button>
         </form>
+
+        <pre>
+func RequestLogger(logger utils.Logger) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		start := time.Now()
+		path := c.Request.URL.Path
+		raw := c.Request.URL.RawQuery
+
+		c.Next() // Process the request
+
+		end := time.Now()
+    }
+}
+        </pre>
     </body>
 </html>
