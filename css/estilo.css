@@ -52,6 +52,56 @@ main {
     flex:1;
 }
 
+
+.hero-panel {
+    position:relative;
+}
+
+.hero-panel img{
+    width:100%;
+    height:80vh; /*Viewport Height*/
+    object-fit: cover;
+}
+
+.hero-panel .hero-action {
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 9px;
+    color:#333;
+    position:absolute;
+    width: 380px;
+    padding:1rem;
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+
+.hero-action button {
+    background-color: #3c51ba;
+    color:#fff;
+    font-weight: bold;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size:1.6rem;
+    border-radius: 1.75rem;
+    box-shadow: 3px 3px 5px #000;
+}
+
+.hero-action.center {
+    top: 50%;
+    left: 50%;
+}
+
+.hero-action.q1 {
+    top: 25%;
+    left: 25%;
+}
+
+.hero-action.q2 {
+    top: 25%;
+    left: 75%;
+}
+
+
 footer {
     background-color: #a47864;
     color:#222;
