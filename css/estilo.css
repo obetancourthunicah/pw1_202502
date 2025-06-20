@@ -181,3 +181,29 @@ footer {
     height:100%;
     object-fit: cover;
 }
+
+.center-content{
+    display:flex;
+    padding:1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.flex {
+    display:flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+@media (min-width:681px){
+    .container-md {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
