@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html {
     height: 100%;
 }
@@ -101,8 +104,80 @@ main {
     left: 75%;
 }
 
+/*Modelo de Cajas*/
+/*
+
+2 tipo de renderizados: bloque (block), fluido (inline)
+
+content - no se aplican estilos de dimensiones
+padding - TRBL  Top, Right, Botton, Left
+border -
+margin -
+
+width: 100%  sumar contenido, padding y border
+box-sizing: border-box
+
+*/
+.card-holder {
+    display: flex; /*Aplica renderizado para layouts*/
+    padding:1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card-holder .card{
+    display:block;
+    background-color:#a47864;
+    width:320px;
+    border: 1px #000 solid;
+    border-radius: 5px;
+}
+
+.card .card-header{
+    box-shadow: 0px 3px 3px #000;
+    position: relative;
+}
+.card .card-header img {
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card .card-header .card-header-label{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    padding: 1rem 0.75rem;
+    background-color:rgba(255,255,255,0.7);
+    width:100%;
+    font-weight: bold;
+}
+.card .card-body {
+    padding: 1rem;
+}
+.card .card-footer {
+    padding:0.5rem 1rem;
+}
+.card .card-footer.right {
+    text-align: right;
+}
+.card .card-footer button{
+    padding:0.8rem 1rem;
+    border: 1px solid #3c51ba;
+    background-color: #485cc0;
+    color:#fff;
+    border-radius: 9px;
+    box-shadow: 1px 1px 3px #000;
+}
+
 
 footer {
     background-color: #a47864;
     color:#222;
+}
+
+.full-image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
 }

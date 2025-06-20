@@ -1,0 +1,69 @@
+.grid-container {
+    width:100%;
+    padding: 1rem 0rem;
+}
+.grid-container .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-container .row [class*="col-"] {
+    flex: 0 1;
+    border: 1px solid #ccc;
+}
+
+.grid-container .row .col-sm-1 {
+    flex-basis: calc(100% / 12);
+}
+.grid-container .row .col-sm-2 {
+    flex-basis: calc(100% / 12 * 2);
+}
+.grid-container .row .col-sm-3 {
+    flex-basis: calc(100% / 12 * 3);
+}
+.grid-container .row .col-sm-4 {
+    flex-basis: calc(100% / 12 * 4);
+}
+.grid-container .row .col-sm-5 {
+    flex-basis: calc(100% / 12 * 5);
+}
+.grid-container .row .col-sm-6 {
+    flex-basis: calc(100% / 12 * 6);
+}
+.grid-container .row .col-sm-7 {
+    flex-basis: calc(100% / 12 * 7);
+}
+.grid-container .row .col-sm-8 {
+    flex-basis: calc(100% / 12 * 8);
+}
+.grid-container .row .col-sm-9 {
+    flex-basis: calc(100% / 12 * 9);
+}
+.grid-container .row .col-sm-10 {
+    flex-basis: calc(100% / 12 * 10);
+}
+.grid-container .row .col-sm-11 {
+    flex-basis: calc(100% / 12 * 11);
+}
+.grid-container .row .col-sm-12 {
+    flex-basis: 100%;
+}
+
+.grid-container .row .offset-sm-1{
+    margin-left: calc(100% / 12);
+}
+.grid-container .row .offset-sm-2{
+    margin-left: calc(100% / 12 * 2);
+}
+.grid-container .row .offset-sm-3{
+    margin-left: calc(100% / 12 * 3);
+}
+.grid-container .row .offset-sm-4{
+    margin-left: calc(100% / 12 * 4);
+}
+.grid-container .row .offset-sm-5{
+    margin-left: calc(100% / 12 * 5);
+}
+.grid-container .row .offset-sm-6{
+    margin-left: calc(100% / 12 * 6);
+}

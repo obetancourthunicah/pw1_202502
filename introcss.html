@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/grid.css" />
 </head>
+
 <body>
     <header>
         <section class="brand-section">
-            <img
-                class="brand"
-                src="https://picsum.photos/id/12/64/64" />
+            <img class="brand" src="https://picsum.photos/id/12/64/64" />
             <h1>Portales Web I</h1>
         </section>
         <nav>
@@ -47,7 +48,7 @@
             <div class="card">
                 <div class="card-header">
                     <img src="https://picsum.photos/id/123/300/200" alt="card 1" />
-                    <span class="class-header-label">Card 1</span>
+                    <span class="card-header-label">Card 1</span>
                 </div>
                 <div class="card-body">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minus illo.</p>
@@ -55,10 +56,11 @@
                 <div class="card-footer right">
                     <button>Agregar</button>
                 </div>
-                <div class="card">
+            </div>
+            <div class="card">
                 <div class="card-header">
                     <img src="https://picsum.photos/id/123/300/200" alt="card 1" />
-                    <span class="class-header-label">Card 1</span>
+                    <span class="card-header-label">Card 1</span>
                 </div>
                 <div class="card-body">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minus illo.</p>
@@ -66,10 +68,23 @@
                 <div class="card-footer right">
                     <button>Agregar</button>
                 </div>
-                <div class="card">
+            </div>
+            <div class="card">
                 <div class="card-header">
                     <img src="https://picsum.photos/id/123/300/200" alt="card 1" />
-                    <span class="class-header-label">Card 1</span>
+                    <span class="card-header-label">Card 1</span>
+                </div>
+                <div class="card-body">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minus illo.</p>
+                </div>
+                <div class="card-footer right">
+                    <button>Agregar</button>
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-header">
+                    <img src="https://picsum.photos/id/123/300/200" alt="card 1" />
+                    <span class="card-header-label">Card 1</span>
                 </div>
                 <div class="card-body">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur minus illo.</p>
@@ -79,6 +94,40 @@
                 </div>
             </div>
         </section>
+        <section class="grid-container">
+            <div class="row">
+                <div class="col-sm-6">
+                    6 col
+                </div>
+                <div class="col-sm-3">
+                    3 col
+                </div>
+                <div class="col-sm-3">
+                    3 col
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-4 offset-sm-2">
+                    4 col
+                </div>
+                <div class="col-sm-4">
+                    4 col
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 full-image">
+                    <picture>
+                        <source srcset="https://picsum.photos/id/270/600/600" media="(min-width: 720px)" >
+                        <img src="https://picsum.photos/id/270/480/480" alt="Half Panel" />
+                    </picture>
+                </div>
+                <div class="col-sm-6">
+                    3 col
+                </div>
+                
+            </div>
+        </section>
     </main>
     <footer>
         <section>
@@ -86,4 +135,5 @@
         </section>
     </footer>
 </body>
+
 </html>
