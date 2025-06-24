@@ -116,7 +116,7 @@
                         4 col
                     </div>
                 </div>
-                <div class="row">
+                <div class="row reverse">
                     <div class="col-sm-12 col-md-7 col-lg-6 full-image">
                         <picture>
                             <source srcset="https://picsum.photos/id/270/600/600" media="(min-width: 720px)">
@@ -125,20 +125,133 @@
                     </div>
                     <div class="col-sm-12 col-md-5 col-lg-6 center-content">
                        <form action="" method="get" class="grid-container">
-                            <div class="row">
-                                <div class="col-sm-12 offset-lg-1 col-lg-10 flex flex-wrap">
-                                    <label for="name" class="col-sm-12 col-md-4">Nombre</label>
+                             <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter">
+                                    <label for="name" class="col-sm-12 col-md-3">Nombre</label>
                                     <input type="text"
                                         name="name" id="name"
-                                        class="col-sm-12 col-md-8"
+                                        class="col-sm-12 col-md-9"
                                         placeholder="Nombre Completo"
                                     />
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter">
+                                    <label for="surname" class="col-sm-12 col-md-3">Apellido</label>
+                                    <input type="text"
+                                        name="surname" id="surname"
+                                        class="col-sm-12 col-md-9"
+                                        placeholder="Apellido"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter">
+                                    <label for="email" class="col-sm-12 col-md-3">Correo</label>
+                                    <input type="email"
+                                        name="email" id="email"
+                                        class="col-sm-12 col-md-9"
+                                        placeholder="uncorre@eletronico.com"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter">
+                                    <label for="ciudad" class="col-sm-12 col-md-3">Ciudad</label>
+                                    <div class="col-sm-12 col-md-9 select">
+                                        <select name="ciudad">
+                                            <option value="">Seleccione una Ciudad</option>
+                                            <option value="TEG">Tegucigalpa</option>
+                                            <option value="CHL">Choluteca</option>
+                                            <option value="SPS">San Pedro Sula</option>
+                                            <option value="SRC">Santa Rosa de Copán</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter h-end gap-2">
+                                   <button class="btn-cancelar">
+                                        Cancelar
+                                   </button>
+                                   <button class="btn-confirmar">
+                                        Enviar
+                                   </button>
+                                </div>
+                            </div>
+                       </form>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-sm-12 col-md-7 col-lg-6 full-image">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/271/600/600" media="(min-width: 720px)">
+                            <img src="https://picsum.photos/id/271/480/480" alt="Half Panel" />
+                        </picture>
+                    </div>
+                    <div class="col-sm-12 col-md-5 col-lg-6 center-content">
+                       <form action="" method="get" class="grid-container">
+                             <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter">
+                                    <label for="name" class="col-sm-12 col-md-3">Nombre</label>
+                                    <input type="text"
+                                        name="name" id="name"
+                                        class="col-sm-12 col-md-9"
+                                        placeholder="Nombre Completo"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter">
+                                    <label for="surname" class="col-sm-12 col-md-3">Apellido</label>
+                                    <input type="text"
+                                        name="surname" id="surname"
+                                        class="col-sm-12 col-md-9"
+                                        placeholder="Apellido"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter">
+                                    <label for="email" class="col-sm-12 col-md-3">Correo</label>
+                                    <input type="email"
+                                        name="email" id="email"
+                                        class="col-sm-12 col-md-9"
+                                        placeholder="uncorre@eletronico.com"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter">
+                                    <label for="ciudad" class="col-sm-12 col-md-3">Ciudad</label>
+                                    <div class="col-sm-12 col-md-9 select">
+                                        <select name="ciudad">
+                                            <option value="">Seleccione una Ciudad</option>
+                                            <option value="TEG">Tegucigalpa</option>
+                                            <option value="CHL">Choluteca</option>
+                                            <option value="SPS">San Pedro Sula</option>
+                                            <option value="SRC">Santa Rosa de Copán</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-2">
+                                <div class="col-sm-12 offset-lg-1 col-lg-10 row vcenter h-end gap-2">
+                                   <button class="btn-cancelar">
+                                        Cancelar
+                                   </button>
+                                   <button class="btn-confirmar">
+                                        Enviar
+                                   </button>
                                 </div>
                             </div>
                        </form>
                     </div>
                 </div>
             </section>
+        </section>
+        <section>
+
         </section>
     </main>
     <footer>
