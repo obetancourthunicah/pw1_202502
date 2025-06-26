@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('forms.css');
 * {
     box-sizing: border-box;
@@ -11,6 +12,7 @@ body {
     min-height: 100vh;
     padding:0px;
     margin:0px;
+    font-family: "Roboto", Arial, sans-serif;
 }
 header {
     display:flex;
@@ -51,6 +53,12 @@ header nav ul li a{
     padding: 0.5rem 0.75rem;
     color: #222;
     text-decoration: none;
+    background-color:#a47864;
+    transition: background-color 1s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #d29b81;
 }
 main {
     flex:1;
@@ -206,5 +214,51 @@ footer {
     .container-md {
         max-width: 720px;
         margin: 0 auto;
+    }
+}
+
+
+aside.full-modal {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.full-modal section .loader {
+    border: 4px dotted #a47864;
+    border-top: 4px solid #a47864;
+    width: 64px;
+    height: 64px;
+    border-radius:50%;
+    animation: rotateLoader 3.7s infinite;
+}
+
+
+@keyframes rotateLoader {
+    0% {
+        transform: rotate(0deg);
+        border-top: 4px solid #a47864;
+    }
+    25%{
+        transform: rotate(90deg);
+        border-top: 5px solid #176341;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-top: 6px solid #a47864;
+    }
+    75%{
+        transform: rotate(270deg);
+        border-top: 5px solid #64a487;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-top: 4px solid #a47864;
     }
 }

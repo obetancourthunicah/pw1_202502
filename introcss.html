@@ -7,6 +7,14 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="css/estilo.css" />
     <link rel="stylesheet" href="css/grid.css" />
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            let modal = document.querySelector("aside.full-modal");
+            setTimeout( ()=> {
+                modal.style.display = "none";
+            }, 15000);
+        });
+    </script>
 </head>
 
 <body>
@@ -259,6 +267,11 @@
             &copy; Derechos Reservados 2025
         </section>
     </footer>
+    <aside class="full-modal">
+        <section class="center">
+            <div class="loader">&nbsp;</div>
+        </section>
+    </aside>
 </body>
 
 </html>
