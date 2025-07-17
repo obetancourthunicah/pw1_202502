@@ -1,100 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Formulario en HTML</title>
-        <script src="js/formValidation.js"></script>
-    </head>
-    <body>
-        <h1>Formulario en HTML</h1>
-        <p>
-            Para capturar datos provienientes del usuario HTML
-            establece etiquetas que sirven para definir controles de captura de datos
-            y le metodo que se utilizará para serializar la informacion y
-            enviarla a la acción definida.
-        </p>
 
-        <form action="formulario.html" method="GET" id="formDemo">
+<head>
+    <meta charset="utf-8" />
+    <title>Formulario en HTML</title>
+    <style>
+        .error {
+            color: darkred;
+        }
+
+        input.error {
+            color: initial;
+            outline: red;
+            border: solid 1px red;
+        }
+    </style>
+    <script src="js/formValidation.js"></script>
+</head>
+
+<body>
+    <h1>Formulario en HTML</h1>
+    <p>
+        Para capturar datos provienientes del usuario HTML
+        establece etiquetas que sirven para definir controles de captura de datos
+        y le metodo que se utilizará para serializar la informacion y
+        enviarla a la acción definida.
+    </p>
+
+    <form action="formulario.html" method="GET" id="formDemo">
+        <div>
             <label for="txtNombre">Nombre Completo:</label>
-            <input type="text" name="nombre" id="txtNombre" placeholder="John Doe"
-                required
-            />
-            <br/>
+            <input type="text" name="nombre" id="txtNombre" placeholder="John Doe" required />
+        </div>
+        <div>
             <label for="txtPassword">Contraseña:</label>
-            <input type="password" name="password" id="txtPassword" placeholder="1# 1M 1m ..."
-                maxlength="32" minlength="8" required
-            />
-            <br/>
+            <input type="password" name="password" id="txtPassword" placeholder="1# 1M 1m ..." maxlength="32"
+                minlength="8" required />
+        </div>
+        <div>
             <label for="txtEmail">Correo Electrónico:</label>
             <input type="email" name="email" id="txtEmail" placeholder="johndoe@amail.com" />
-            <br/>
-            <label for="txtPhone">Teléfono Celular:</label>
-            <input type="text" name="phone" id="txtPhone" placeholder="+(504) 9999-9999" />
-            <br/>
-            <label for="txtEdad">Edad:</label>
-            <input type="number" name="edad" id="txtEdad" placeholder="0-100" min="0" max="100" step="1" />
-            <br/>
-            <label for="txtFecha">Fecha de Salida:</label>
-            <input type="date" name="fecha" id="txtFecha" />
-            <br/>
-            <label for="txtSalario">Salario:</label>
-            <input type="range" name="salario" id="txtSalario" />
-            <br/>
-            <label>Color Preferido</label>
-            <br/>
-            <input type="radio" name="color" id="colorRojo" value="red"/>
-            <label for="colorRojo">&nbsp;Rojo</label>
-            &nbsp;
-            <input type="radio" name="color" id="colorAzul" value="blue" checked/>
-            <label for="colorAzul">&nbsp;Azul</label>
-            &nbsp;
-            <input type="radio" name="color" id="colorVerde" value="green"/>
-            <label for="colorVerde">&nbsp;Verde</label>
-            &nbsp;
-            <input type="radio" name="color" id="colorAmarillo" value="yellow"/>
-            <label for="colorAmarillo">&nbsp;Amarillo</label>
-            <br/>
-            <label for="cmbPais">País de Origen:</label>
-            <select name="pais" id="cmbPais">
-                <option value="HND">Honduras</option>
-                <option value="GTM">Guatemala</option>
-                <option value="ESL">El Salvador</option>
-                <option value="NIC">Nicaragua</option>
-                <option value="PMA">Panamá</option>
-                <option value="MEX">México</option>
-                <option value="USA">Estado Unidos</option>
-                <option value="ARG">Argentina</option>
-            </select>
+        </div>
+        <label for="txtPhone">Teléfono Celular:</label>
+        <input type="text" name="phone" id="txtPhone" placeholder="+(504) 9999-9999" />
+        <br />
+        <label for="txtEdad">Edad:</label>
+        <input type="number" name="edad" id="txtEdad" placeholder="0-100" min="0" max="100" step="1" />
+        <br />
+        <label for="txtFecha">Fecha de Salida:</label>
+        <input type="date" name="fecha" id="txtFecha" />
+        <br />
+        <label for="txtSalario">Salario:</label>
+        <input type="range" name="salario" id="txtSalario" />
+        <br />
+        <label>Color Preferido</label>
+        <br />
+        <input type="radio" name="color" id="colorRojo" value="red" />
+        <label for="colorRojo">&nbsp;Rojo</label>
+        &nbsp;
+        <input type="radio" name="color" id="colorAzul" value="blue" checked />
+        <label for="colorAzul">&nbsp;Azul</label>
+        &nbsp;
+        <input type="radio" name="color" id="colorVerde" value="green" />
+        <label for="colorVerde">&nbsp;Verde</label>
+        &nbsp;
+        <input type="radio" name="color" id="colorAmarillo" value="yellow" />
+        <label for="colorAmarillo">&nbsp;Amarillo</label>
+        <br />
+        <label for="cmbPais">País de Origen:</label>
+        <select name="pais" id="cmbPais">
+            <option value="HND">Honduras</option>
+            <option value="GTM">Guatemala</option>
+            <option value="ESL">El Salvador</option>
+            <option value="NIC">Nicaragua</option>
+            <option value="PMA">Panamá</option>
+            <option value="MEX">México</option>
+            <option value="USA">Estado Unidos</option>
+            <option value="ARG">Argentina</option>
+        </select>
 
-            <br/>
-            <fieldset>
-                <legend>Opciones de Configuración</legend>
-                <input type="checkbox" value="1" name="allowFileAccess" id="chkAllFileAccess" />
-                <label for="chkAllFileAccess">Permitir Acceso a Archivos</label>
-                <br/>
-                <input type="checkbox" value="1" name="allowVideoDevice" id="chkAllVideoDevice" />
-                <label for="chkAllVideoDevice">Permitir Acceso a Cámara</label>
-                <br/>
-                <input type="checkbox" value="1" name="allowAudioDevice" id="chkAllAudioDevice" />
-                <label for="chkAllAudioDevice">Permitir Acceso a Micrófono</label>
-                <br/>
-            </fieldset>
-            <label for="txtBio">Bio:</label><br/>
-            <textarea
-                name="biotext"
-                id="txtBio"
-                placeholder="Auto biografía corta"
-                rows="10"
-                maxlength="1024"
-                cols="80"
-            ></textarea>
-            <br/>
+        <br />
+        <fieldset>
+            <legend>Opciones de Configuración</legend>
+            <input type="checkbox" value="1" name="allowFileAccess" id="chkAllFileAccess" />
+            <label for="chkAllFileAccess">Permitir Acceso a Archivos</label>
+            <br />
+            <input type="checkbox" value="1" name="allowVideoDevice" id="chkAllVideoDevice" />
+            <label for="chkAllVideoDevice">Permitir Acceso a Cámara</label>
+            <br />
+            <input type="checkbox" value="1" name="allowAudioDevice" id="chkAllAudioDevice" />
+            <label for="chkAllAudioDevice">Permitir Acceso a Micrófono</label>
+            <br />
+        </fieldset>
+        <label for="txtBio">Bio:</label><br />
+        <textarea name="biotext" id="txtBio" placeholder="Auto biografía corta" rows="10" maxlength="1024"
+            cols="80"></textarea>
+        <br />
 
-            <!-- <input type="submit" name="btnEnviar" value="Enviar" /> -->
-            <button type="submit" name="btnSubmit">Enviar</button>
-        </form>
+        <!-- <input type="submit" name="btnEnviar" value="Enviar" /> -->
+        <button type="submit" name="btnSubmit">Enviar</button>
+    </form>
 
-        <pre>
+    <pre>
 func RequestLogger(logger utils.Logger) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		start := time.Now()
@@ -107,5 +114,6 @@ func RequestLogger(logger utils.Logger) gin.HandlerFunc {
     }
 }
         </pre>
-    </body>
+</body>
+
 </html>
