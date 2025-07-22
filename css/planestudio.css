@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding:1rem;
+    max-width: 1024px;
+}
+
+.plan .bloque {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding:0.25rem;
+    border: 1px solid #333;
+}
+
+.plan .bloque h2 {
+    font-weight: bold;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan .bloque .asignaturas {
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.plan .bloque .asignaturas .asignatura {
+    border: 1px solid #333;
+    width: 8.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 4.75rem;
+}
+.plan .bloque .asignaturas .asignatura div {
+    width: 100%;
+    text-align: center;
+    padding: 0.1rem 0.2rem;
+    text-wrap: wrap;
+    word-break: break-all;
+    font-size: 0.7rem;
+}

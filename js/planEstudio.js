@@ -120,6 +120,7 @@ class PlanEstudio{
     constructor(container, data){
         this.container = container;
         this.data = data;
+        this.nodes = {};
     }
 
     generarHTML(){
@@ -146,12 +147,46 @@ class PlanEstudio{
                 h2.innerHTML = bloque.codigo;
                 bloqueHtml.appendChild(h2);
 
+                const asignaturas = this.generarAsignaturas(bloque);
+                bloqueHtml.appendChild(asignaturas);
                 this.contenedor.appendChild(bloqueHtml);
             }
         );
     }
-    generarAsignaturas(){
+    generarAsignaturas( bloque ){
+        const asignaturasHtml = document.createElement("DIV");
+        asignaturasHtml.classList.add("asignaturas");
+        bloque.asignaturas.forEach( (asignatura,i)=>{
+            const asignaturaHTML = document.createElement("DIV");
+            asignaturaHTML.classList.add("asignatura");
+            const codigo = document.createElement("DIV");
+            const label = document.createElement("DIV");
+            const creditos = document.createElement("DIV");
 
+            codigo.innerHTML = asignatura.codigo;
+            label.innerHTML = asignatura.nombre;
+            creditos.innerHTML = `Créditos: ${asignatura.creditos}`;
+
+            asignaturaHTML.appendChild(codigo);
+            asignaturaHTML.appendChild(label);
+            asignaturaHTML.appendChild(creditos);
+
+            this.nodes[asignatura.codigo] = {}
+            this.nodes[asignatura.codigo]["node"] = asignaturaHTML;
+            this.nodes[asignatura.codigo]["requisitos"] = asignatura.requisitos;
+            this.nodes[asignatura.codigo]["apertura"] = [];
+            asignatura.requisitos.forEach( req => {
+                if (this.nodes[req]) {
+                    if (!this.nodes[req]["apertura"].includes(req)){
+                        this.nodes[req]["apertura"].push(req);
+                    }
+                }
+            });
+
+            asignaturasHtml.appendChild(asignaturaHTML);
+
+        });
+        return asignaturasHtml;
     }
 }
 
