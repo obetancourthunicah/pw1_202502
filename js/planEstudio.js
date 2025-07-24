@@ -177,10 +177,28 @@ class PlanEstudio{
             this.nodes[asignatura.codigo]["apertura"] = [];
             asignatura.requisitos.forEach( req => {
                 if (this.nodes[req]) {
-                    if (!this.nodes[req]["apertura"].includes(req)){
-                        this.nodes[req]["apertura"].push(req);
+                    if (!this.nodes[req]["apertura"].includes(asignatura.codigo)){
+                        this.nodes[req]["apertura"].push(asignatura.codigo);
                     }
                 }
+            });
+            this.nodes[asignatura.codigo]["node"].addEventListener("mouseover", (e)=>{
+                this.nodes[asignatura.codigo]["requisitos"].forEach( req => {
+                    this.nodes[req]["node"].classList.add("requisito");
+                })
+                this.nodes[asignatura.codigo]["apertura"].forEach( req => {
+                    this.nodes[req]["node"].classList.add("apertura");
+                })
+                this.nodes[asignatura.codigo]["node"].classList.add("focused");
+            });
+            this.nodes[asignatura.codigo]["node"].addEventListener("mouseout", (e)=>{
+                this.nodes[asignatura.codigo]["requisitos"].forEach( req => {
+                    this.nodes[req]["node"].classList.remove("requisito");
+                })
+                 this.nodes[asignatura.codigo]["apertura"].forEach( req => {
+                    this.nodes[req]["node"].classList.remove("apertura");
+                })
+                this.nodes[asignatura.codigo]["node"].classList.remove("focused");
             });
 
             asignaturasHtml.appendChild(asignaturaHTML);

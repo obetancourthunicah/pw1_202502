@@ -61,3 +61,16 @@ body {
     word-break: break-all;
     font-size: 0.7rem;
 }
+
+.requisito {
+    background-color: #af9e02;
+}
+
+.focused {
+    background-color: #023caf;
+    color:white;
+}
+
+.apertura {
+    background-color: #02af9e;
+}
